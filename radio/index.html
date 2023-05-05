@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0 minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Кастомные радиокнопки</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <p><b>Способ доставки:</b></p>
+    <ul class="radio-group" id="radio-group">
+      <li>
+        <span class="radio-button" tabindex="0">Самовывоз</span>
+      </li>
+      <li>
+        <span class="radio-button" tabindex="-1">Курьером до двери</span>
+      </li>
+      <li>
+        <span class="radio-button" tabindex="-1">Почтой России</span>
+      </li>
+    </ul>
+
+    <fieldset>
+      <legend>Радиокнопки в качестве образца</legend>
+      <label> <input type="radio" name="example" value="1" />1</label>
+      <label> <input type="radio" name="example" value="2" />2</label>
+      <label> <input type="radio" name="example" value="3" />3</label>
+      <label> <input type="radio" name="example" value="4" />4</label>
+    </fieldset>
+
+    <script src="script.js"></script>
+  </body>
+</html>
