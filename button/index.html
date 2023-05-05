@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0 minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Кастомная и нативная кнопка</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <button class="button" type="button">Кнопка <code>button</code></button>
+    <div class="button js-button" tabindex="0">Кнопка <code>div</code></div>
+
+    <p>Отключенные кнопки <code>:disabled</code></p>
+    <div>
+      <button class="button" type="button" disabled>
+        Кнопка <code>button</code>
+      </button>
+      <div class="button js-button disabled">Кнопка <code>div</code></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
