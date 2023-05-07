@@ -1,0 +1,137 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 1.3;
+}
+
+/* весь контрол */
+.radio,
+.checkbox {
+  position: relative;
+  display: block;
+  width: fit-content;
+  margin: 8px 0;
+  padding: 0 8px 0 29px;
+  cursor: pointer;
+}
+
+/* input[type="radio"]
+   input[type="checkbox"] */
+.radio-input,
+.checkbox-input {
+  position: absolute;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* отметка контрола */
+.radio-mark,
+.checkbox-mark {
+  position: absolute;
+  top: 3px;
+  left: 6px;
+  width: 16px;
+  height: 16px;
+  display: block;
+  border: 2px solid #919191;
+}
+
+/* отметка контрола - скругление радиокнопки */
+.radio-mark {
+  border-radius: 50%;
+}
+
+/* отметка контрола - внутренняя часть ::after */
+.radio-mark::after,
+.checkbox-mark::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+/* отметка радиокнопки - круг */
+.radio-mark::after {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: #1a5bff;
+}
+
+/* отметка чекбокса - галочка */
+.checkbox-mark::after {
+  width: 11px;
+  height: 9px;
+  background: url(check.svg) no-repeat center;
+  background-size: contain;
+}
+
+/* состояние :checked - отмечено */
+/* граница отметки */
+.radio-input:checked + .radio-mark,
+.checkbox-input:checked + .checkbox-mark {
+  border-color: #1a5bff;
+}
+
+/* отметка контрола - внутренняя часть ::after */
+.radio-input:checked + .radio-mark::after,
+.checkbox-input:checked + .checkbox-mark::after {
+  display: block;
+}
+
+/* состояние :hover - наведение */
+/* граница */
+.radio:hover .radio-mark,
+.checkbox:hover .checkbox-mark {
+  border-color: #003acc;
+}
+
+/* внутренний круг */
+.radio:hover .radio-mark::after {
+  background-color: #003acc;
+}
+
+/* состояние :active - нажатие */
+/* граница */
+.radio:active .radio-mark,
+.checkbox:active .checkbox-mark {
+  border-color: #4d7fff;
+}
+
+/* внутренний круг */
+.radio:active .radio-mark::after {
+  background-color: #4d7fff;
+}
+
+/* галочка чекбокса */
+.checkbox:active .checkbox-mark::after {
+  opacity: 0.8;
+}
+
+/* состояние :focus */
+.radio:focus-within,
+.checkbox:focus-within {
+  outline: 3px solid #7fa3ffba;
+  border-radius: 1px;
+}
+
+/* состояние :disabled */
+.radio-input:disabled,
+.radio.disabled,
+.checkbox-input:disabled,
+.checkbox.disabled {
+  opacity: 0.5;
+  filter: grayscale(0.5);
+  pointer-events: none;
+}
