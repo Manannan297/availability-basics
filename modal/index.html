@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Модальное окно</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <button class="button callback-button" id="open-popup">
+      Нажми на кнопку
+    </button>
+
+    <div class="popup" id="popup" tabindex="-1">
+      <div class="popup-overlay"></div>
+      <div class="popup-body">
+        <h1 class="form-title">Осуществим вашу мечту</h1>
+
+        <button class="popup-close" title="Закрыть">
+          <span class="sr-only">Закрыть модальное окно.</span>
+        </button>
+
+        <form class="form" action="https://echo.htmlacademy.ru">
+          <label for="dream">О чем вы мечтаете?</label>
+          <textarea
+            id="dream"
+            name="dream"
+            class="input-text"
+            placeholder="Например, покорить ветер"
+            required
+          ></textarea>
+
+          <label for="delivery">Как вам передать результат</label>
+          <input
+            id="delivery"
+            name="delivery"
+            class="input-text"
+            type="text"
+            placeholder="Например, с шорохом ночного дождя"
+            required
+          />
+
+          <button class="button submit-button" type="submit">
+            Получить результат!
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
